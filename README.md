@@ -1,13 +1,15 @@
 # Capybara::Ember::Inspector
 
-TODO: Write a gem description
+Adds Ember Inspector capable Selenium Driver into your Capybara tests for convenient debugging
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'capybara-ember-inspector'
+group :test do
+  gem 'capybara-ember-inspector', require: false
+end
 ```
 
 And then execute:
@@ -20,7 +22,11 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Require `capybara/ember/inspector` in your test file, for example in `rails_helper.rb` or `spec_helper.rb` to set up Capybara's `:selenium` Driver to run your tests in Chrome with the Ember Inspector extension already enabled. This allows you to pause your tests at any time and activeate the inspector within Chrome, just like you would during development.
+
+## Licensing
+
+This gem contains a pre-built version of the [Ember Inspector](https://github.com/emberjs/ember-inspector) source code that is licensed under the [MIT License](https://github.com/emberjs/ember-inspector/blob/master/LICENSE) and is subject to copyrights.
 
 ## Contributing
 
